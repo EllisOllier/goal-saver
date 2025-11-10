@@ -61,6 +61,7 @@ export async function POST(_req: NextRequest){
         .single();
     
     if(error){
+        console.log(error.message);
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
